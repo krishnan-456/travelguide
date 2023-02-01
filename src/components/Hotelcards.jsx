@@ -1,5 +1,4 @@
 import React from 'react'
-import { MdLocationOn } from 'react-icons/md'
 import { AiFillEye } from 'react-icons/ai'
 import { Rating } from '@mui/material'
 
