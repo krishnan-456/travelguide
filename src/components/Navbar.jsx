@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className='w-full h-20 bg-white sticky top-0 z-50'>
             <div className='w-full h-full flex items-center justify-between px-10'>
                 <div>
-                    <p className='text-xl text-slate-900 font-bold'><Link to='/'>Travel</Link></p>
+                    <p className='text-xl text-slate-900 font-bold'><Link to='/'>Travelguide</Link></p>
                 </div>
                 <div className='md:flex hidden'>
                     <ul className='flex items-center justify-center'>
@@ -128,7 +128,7 @@ const Navbar = () => {
                 <div className={nav ? "w-60 h-screen bg-white absolute z-50 top-0  left-0 duration-75 ease-in " : "w-60 h-screen bg-white absolute z-50 top-0 left-[-9999px] duration-75 ease-in"}>
 
                     <div className='flex items-center justify-between px-5 py-7'>
-                        <div><p className='text-xl text-slate-900 font-bold'>Travel</p></div>
+                        <div><p className='text-xl text-slate-900 font-bold'>Travelguide</p></div>
                         <div onClick={handleNav} className="cursor-pointer text-slate-900"><RiCloseFill size={25} /></div>
                     </div>
                     <div className='mt-10'>

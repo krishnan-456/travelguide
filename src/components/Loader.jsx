@@ -1,24 +1,25 @@
 import React from 'react'
-import Lottie from 'react-lottie';
 import animationData from '../loader.json';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const Loader = () => {
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-          preserveAspectRatio: "xMidYMid slice"
-        }
-      };
+    // const defaultOptions = {
+    //     loop: true,
+    //     autoplay: true,
+    //     animationData: animationData,
+    //     rendererSettings: {
+    //       preserveAspectRatio: "xMidYMid slice"
+    //     }
+    //   };
     
     return (
       <div className='w-full h-[80vh] flex items-center justify-center'>
-        <Lottie 
-          options={defaultOptions}
-          height={200}
-          width={200}
-        />
+        <Player
+        autoplay
+        loop
+        src={animationData}
+        className="w-[180px] h-[180px]"
+        ></Player>
       </div>
     );
   
