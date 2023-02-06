@@ -1,11 +1,14 @@
 import React from 'react'
 import Card from './Card'
+import Footer from './Footer'
 import Loader from './Loader'
+import Navbar from './Navbar'
 
 
 const List = ({ places, loading}) => {
   return (
     <div>
+      <Navbar/>
     {loading ? (<Loader/>) : (
     <>
     <div className='flex items-center justify-center mt-10'>
@@ -19,6 +22,7 @@ const List = ({ places, loading}) => {
   </div>
   </>
   )}
+  <Footer/>
   </div>
   )
 }

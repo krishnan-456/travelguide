@@ -1,10 +1,13 @@
 import React from 'react'
+import Footer from './Footer'
 import Hotelcards from './Hotelcards'
 import Loader from './Loader'
+import Navbar from './Navbar'
 
 const HotelList = ({ hotels, loading }) => {
     return (
         <div>
+            <Navbar />
             {loading ? (<Loader />) : (
                 <>
                     <div className='flex items-center justify-center mt-10'>
@@ -18,6 +21,7 @@ const HotelList = ({ hotels, loading }) => {
                     </div>
                 </>
             )}
+            <Footer />
         </div>
     )
 }

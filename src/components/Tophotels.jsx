@@ -7,9 +7,9 @@ import { Rating } from '@mui/material';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
-const Toprestaurants = ({ places, loading }) => {
+const Tophotels = ({ hotels, loading }) => {
 
-    const filterplaces = places.filter((place) => place.rating > "3.0");
+    const filterplaces = hotels.filter((hotels) => hotels.rating > "3.0");
 
     return (
         <div>
@@ -79,18 +79,18 @@ const Toprestaurants = ({ places, loading }) => {
                         </>
                     ) : (
                         <>
-                            {filterplaces?.map((place, j) => (
+                            {filterplaces?.map((hotel, j) => (
                                 <div item key={j}>
                                     <SwiperSlide>
                                         <div className='bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent'>
                                             <div className='relative'>
-                                                <img src={place.photo ? place.photo.images.large.url : "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} alt='restaurants near you' className='mix-blend-overlay' />
+                                                <img src={hotel.photo ? hotel.photo.images.large.url : "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} alt='restaurants near you' className='mix-blend-overlay' />
                                             </div>
                                             <div className='text-white lg:text-2xl md:text-xl text-lg font-semibold absolute bottom-12 px-4 text-left'>
-                                                <p>{place.name}</p>
+                                                <p>{hotel.name}</p>
                                             </div>
                                             <div className='absolute px-4 bottom-4 text-left'>
-                                                <Rating size="small" value={Number(place.rating)} readOnly />
+                                                <Rating size="small" value={Number(hotel.rating)} readOnly />
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -104,4 +104,4 @@ const Toprestaurants = ({ places, loading }) => {
     )
 }
 
-export default Toprestaurants
+export default Tophotels

@@ -1,10 +1,13 @@
 import React from 'react'
 import Attractioncard from './Attractioncard'
+import Footer from './Footer'
 import Loader from './Loader'
+import Navbar from './Navbar'
 
 const AttractionsList = ({attractions, loading}) => {
     return (
         <div>
+            <Navbar/>
             {loading ? (<Loader />) : (
                 <>
                     <div className='flex items-center justify-center mt-10'>
@@ -18,6 +21,7 @@ const AttractionsList = ({attractions, loading}) => {
                     </div>
                 </>
             )}
+            <Footer/>
         </div>
     )
 }

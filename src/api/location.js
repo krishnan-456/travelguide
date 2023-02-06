@@ -1,16 +1,16 @@
 import axios from "axios";
-const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng';
+const URL = 'https://travel-advisor.p.rapidapi.com/locations/auto-complete';
 
 
 
-const getPlaces = async (lt,ln) =>
+const getLocations = async (input) =>
 {
     try {
         const {data:{data}} = await axios.get(URL, 
           {
           params: {
-            latitude: lt,
-            longitude: ln,
+            query: input,
+            
           },
           headers: {
             'X-RapidAPI-Key': 'c47da67876msh8d94c6e819bf7fep1a28eajsn3d1d8831c07a',
@@ -24,4 +24,4 @@ const getPlaces = async (lt,ln) =>
 }
 
 
-export default getPlaces
+export default getLocations

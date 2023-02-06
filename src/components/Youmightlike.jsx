@@ -51,28 +51,28 @@ const Youmightlike = ({ attractions, loading }) => {
                         <div className='flex items-center justify-evenly'>
                             <div className='mx-2'>
                                 <Skeleton width={280} height={280} />
-                                <Skeleton width={240} />
-                                <Skeleton width={200} />
+                                <Skeleton width={220} />
+                                <Skeleton width={180} />
                             </div>
                             <div className='mx-2'>
                                 <Skeleton width={280} height={280} />
-                                <Skeleton width={240} />
-                                <Skeleton width={200} />
+                                <Skeleton width={220} />
+                                <Skeleton width={180} />
                             </div>
                             <div className='mx-2'>
                                 <Skeleton width={280} height={280} />
-                                <Skeleton width={240} />
-                                <Skeleton width={200} />
+                                <Skeleton width={220} />
+                                <Skeleton width={180} />
                             </div>
                             <div className='mx-2'>
                                 <Skeleton width={280} height={280} />
-                                <Skeleton width={240} />
-                                <Skeleton width={200} />
+                                <Skeleton width={220} />
+                                <Skeleton width={180} />
                             </div>
                             <div className='mx-2'>
                                 <Skeleton width={280} height={280} />
-                                <Skeleton width={240} />
-                                <Skeleton width={200} />
+                                <Skeleton width={220} />
+                                <Skeleton width={180} />
                             </div>
                         </div>
                     </>
