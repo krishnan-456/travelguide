@@ -40,7 +40,7 @@ const Signin = () => {
     try {
       const log = await signInWithGoogle();
 
-      setCookie("user", log, 10);
+      setCookie("user", log, 30);
       // localStorage.setItem('user', user.email)
       navigate('/');
     } catch (err) {

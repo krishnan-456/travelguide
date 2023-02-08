@@ -3,6 +3,7 @@ import Footer from './Footer'
 import Hotelcards from './Hotelcards'
 import Loader from './Loader'
 import Navbar from './Navbar'
+import Slideup from './Slideup'
 
 const HotelList = ({ hotels, loading }) => {
     return (
@@ -19,6 +20,7 @@ const HotelList = ({ hotels, loading }) => {
                             ))}
                         </div>
                     </div>
+                    <Slideup/>
                 </>
             )}
             <Footer />

@@ -3,6 +3,7 @@ import Attractioncard from './Attractioncard'
 import Footer from './Footer'
 import Loader from './Loader'
 import Navbar from './Navbar'
+import Slideup from './Slideup'
 
 const AttractionsList = ({attractions, loading}) => {
     return (
@@ -19,6 +20,7 @@ const AttractionsList = ({attractions, loading}) => {
                             ))}
                         </div>
                     </div>
+                    <Slideup/>
                 </>
             )}
             <Footer/>
