@@ -125,8 +125,8 @@ const App = () => {
             <Route path='/attractions' element={<ProtectedRoute><AttractionsList attractions={attractions} loading={loading} /></ProtectedRoute>} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/signin' element={<Signin />} />
-            <Route path='/guide' element={<Allguide places={places} locationdetails={locationdetails} attractions={attractions} hotels={hotels} loading={loading} />} />
-            <Route path='/form' element={<FeedbackForm />} />
+            <Route path='/guide' element={<ProtectedRoute><Allguide places={places} locationdetails={locationdetails} attractions={attractions} hotels={hotels} loading={loading} /></ProtectedRoute>} />
+            <Route path='/form' element={<ProtectedRoute><FeedbackForm /></ProtectedRoute>} />
           </Routes>
         </UserAuthContextProvider>
       </div>

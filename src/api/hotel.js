@@ -13,7 +13,7 @@ const getHotels = async (lt,ln) =>
             longitude: ln,
           },
           headers: {
-            'X-RapidAPI-Key': 'c47da67876msh8d94c6e819bf7fep1a28eajsn3d1d8831c07a',
+            'X-RapidAPI-Key': 'a533b9995fmshb1ebf62582d2d8fp169fe7jsn74f940cca8be',
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
           }
         });

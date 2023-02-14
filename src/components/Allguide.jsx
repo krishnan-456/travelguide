@@ -38,15 +38,15 @@ const Allguide = (props) => {
                                 <p className="sm:text-lg text-base font-medium text-slate-800 xl:pr-20">{locImg.description ? locImg.description : (<p>{locImg.result_object.name}, a beautiful and historic destination located in {locImg.result_object.parent_display_name}. This magnificent site boasts cultural heritage, making it a must-visit destination for anyone interested in tourism.</p>)}</p>
                                 {/* <p>Restaurants {Number(rests.length)}</p> */}
                                 <div className="">
-                                    <div className='w-56 h-54   border-2 border-slate-900 py-3 flex items-center justify-between px-4 rounded-lg mb-6 mt-10'>
+                                    <div className='w-56 h-54   border-2 border-slate-900 py-3 flex items-center justify-between px-4 rounded-lg mb-6 mt-10' onClick={() => navigate('/restaurants')}>
                                         <div><p className='sm:text-lg text-base font-medium'>Restaurants</p></div>
                                         <div className='sm:text-lg text-base'>{Number(rests.length)}</div>
                                     </div>
-                                    <div className='w-56 h-54   border-2 border-slate-900 py-3 flex items-center justify-between px-4 rounded-lg mb-6'>
+                                    <div className='w-56 h-54   border-2 border-slate-900 py-3 flex items-center justify-between px-4 rounded-lg mb-6' onClick={() => navigate('/hotels')}>
                                         <div><p className='sm:text-lg text-base font-medium'>Hotels</p></div>
                                         <div className='sm:text-lg text-base'>{Number(hotels.length)}</div>
                                     </div>
-                                    <div className='w-56 h-54   border-2 border-slate-900 py-3 flex items-center justify-between px-4 rounded-lg'>
+                                    <div className='w-56 h-54   border-2 border-slate-900 py-3 flex items-center justify-between px-4 rounded-lg' onClick={() => navigate('/attractions')}>
                                         <div><p className='sm:text-lg text-base font-medium'>Attractions</p></div>
                                         <div className='sm:text-lg text-base'>{Number(attractions.length)}</div>
                                     </div>

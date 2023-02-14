@@ -13,7 +13,7 @@ import Topdestination from './Topdestination'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, } from "swiper";
-import { TbLocation } from "react-icons/tb"
+import { MdOutlineMyLocation } from "react-icons/md"
 import Navbar from './Navbar'
 import Footer from './Footer'
 // import Allguide from './Allguide.jsx'
@@ -119,7 +119,7 @@ const Home = ({ places, attractions, loading, setInput, onGetCurrent, locationde
                                         setRec(true)
                                     }}
                                     onFocus={() => { setBorder("rounded-t-xl") }} required />
-                                <button className='hover:bg-gray-200 rounded-full p-2 duration-150 ease-in' type='submit' ><BiSearch size={20} /></button>
+                                <button className='hover:bg-gray-200 rounded-full p-2 duration-150 ease-in' type='submit' onClick={handleClick} ><BiSearch size={20} /></button>
                             </form>
                             <div>
                             </div>
@@ -127,10 +127,10 @@ const Home = ({ places, attractions, loading, setInput, onGetCurrent, locationde
                         {
                             rec ? (
                                 <div>
-                                    <Link to="/restaurants">
-                                        <button onClick={onGetCurrent} className="md:w-[620px] w-[320px] h-14 bg-white shadow-xl flex items-start  sm:px-10 px-1 border-t-2">
-                                            <div className='flex items-center justify-center mt-2'>
-                                                <div className='bg-gray-200 p-2 rounded-full mr-3'><TbLocation size={18} /></div>
+                                    <Link to="">
+                                        <button onClick={onGetCurrent} className="md:w-[620px] w-[320px] h-14 bg-white shadow-xl flex items-start  sm:px-8 px-2 border-t-2">
+                                            <div className='flex items-center justify-center sm:pl-0 pl-10 mt-3'>
+                                                <div className='mr-3'><MdOutlineMyLocation size={18} /></div>
                                                 <div><p>Nearby</p></div>
                                             </div>
                                         </button>
