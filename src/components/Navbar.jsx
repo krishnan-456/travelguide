@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { SlPencil } from 'react-icons/sl'
+import { HiOutlinePencil } from 'react-icons/hi'
 import { AiOutlineHeart } from 'react-icons/ai'
 // import { BiSearch } from 'react-icons/bi'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
@@ -8,6 +8,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useUserAuth } from '../context/UserAuthContext'
 import userlogo from '../assets/customer2.png'
 import { IoIosArrowDown } from "react-icons/io"
+import { MdOutlineLocalHotel } from 'react-icons/md'
+import { IoFastFoodOutline } from 'react-icons/io5'
+import { TbMountain } from 'react-icons/tb'
 const Navbar = () => {
     const navigate = useNavigate();
     const [nav, setNav] = useState(false);
@@ -49,13 +52,27 @@ const Navbar = () => {
                 </div>
                 <div className='md:flex hidden'>
                     <ul className='flex items-center justify-center'>
-                        <li className='mr-8  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer'>
-                            <div className='lg:hover:bg-transparent md:hover:bg-gray-200 rounded-full p-2 duration-150 ease-in'><AiOutlineHeart size={23} /></div>
-                            <div className='lg:flex hidden'>Destinations</div>
-                        </li>
+                        <Link to='/restaurants'>
+                            <li className='mr-8  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer'>
+                                <div className='lg:hover:bg-transparent md:hover:bg-gray-200 rounded-full p-2 duration-150 ease-in'><IoFastFoodOutline size={23} /></div>
+                                <div className='lg:flex hidden'>Restaurants</div>
+                            </li>
+                        </Link>
+                        <Link to='/hotels'>
+                            <li className='mr-8  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer'>
+                                <div className='lg:hover:bg-transparent md:hover:bg-gray-200 rounded-full p-2 duration-150 ease-in'><MdOutlineLocalHotel size={23} /></div>
+                                <div className='lg:flex hidden'>Hotels</div>
+                            </li>
+                        </Link>
+                        <Link to='/attractions'>
+                            <li className='mr-8  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer'>
+                                <div className='lg:hover:bg-transparent md:hover:bg-gray-200 rounded-full p-2 duration-150 ease-in'><TbMountain size={23} /></div>
+                                <div className='lg:flex hidden'>Attractions</div>
+                            </li>
+                        </Link>
                         <Link to='/form'>
                             <li className='mr-8  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer'>
-                                <div className='lg:hover:bg-transparent md:hover:bg-gray-200 rounded-full p-2 duration-150 ease-in'><SlPencil size={18} /></div>
+                                <div className='lg:hover:bg-transparent md:hover:bg-gray-200 rounded-full p-2 duration-150 ease-in'><HiOutlinePencil size={23} /></div>
                                 <div className='lg:flex hidden'>Feedback</div>
                             </li>
                         </Link>
@@ -68,52 +85,52 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 <div class="dropdown-content">
-                                <li className='font-semibold text-slate-900 mb-3'>{user.email}</li>
+                                    <li className='font-semibold text-slate-900 mb-3'>{user.email}</li>
                                     <li className='bg-slate-900 text-white  font-semibold px-10 py-2 cursor-pointer rounded-full text-center' onClick={function handleRemove() {
                                         setCookie("user", null, 0)
                                         navigate("/")
                                     }}>Logout</li>
                                 </div>
                             </div>
-                        //     <div>
-                        //         <div className=' flex items-center justify-center gap-3'>
-                        //             <img src={userlogo} alt="userprofileimage" className='w-9 h-9' />
-                        //             <div>
-                        //                 <IoIosArrowDown />
-                        //             </div>
-                        //         </div>
-                        //         <div className=''>
-                        //             <li className='font-semibold text-slate-900 underline'>{user.email}</li>
-                        //             <li className='bg-slate-900 text-white  font-semibold px-10 py-2 cursor-pointer rounded-full' onClick={function handleRemove() {
-                        //                 setCookie("user", null, 0)
-                        //                 navigate("/")
-                        //             }}>Logout</li>
-                        //             <Dropdown
-                        //             label=""
-                        //             inline={true}
-                        //         >
-                        //             <Dropdown.Item>
-                        //                 <div className=''>
-                        //                     <li className='font-semibold text-slate-900 mx-2'>{user.email}</li>
-                        //                 </div>
-                        //             </Dropdown.Item>
-                        //             <Dropdown.Item>
-                        //                 <li className='bg-slate-900 text-white font-semibold px-10 py-2 cursor-pointer rounded-full mx-5' onClick={function handleRemove() {
-                        //                     setCookie("user", null, 0)
-                        //                     navigate("/")
-                        //                 }}>Logout</li>
-                        //             </Dropdown.Item>
-                        //         </Dropdown>
-                        //         <li><img src={userlogo} alt="userprofileimage" className='w-9 h-9' /></li>
-                        //         <div className={click ? "bg-white p-4" : "bg-none"}>
-                        //             <li className='font-semibold text-slate-900 underline'>{user.email}</li>
-                        //             <li className='bg-slate-900 text-white  font-semibold px-10 py-2 cursor-pointer rounded-full' onClick={function handleRemove() {
-                        //                 setCookie("user", null, 0)
-                        //                 navigate("/")
-                        //             }}>Logout</li>
-                        //         </div>
-                        //         </div>
-                        // </div>
+                            //     <div>
+                            //         <div className=' flex items-center justify-center gap-3'>
+                            //             <img src={userlogo} alt="userprofileimage" className='w-9 h-9' />
+                            //             <div>
+                            //                 <IoIosArrowDown />
+                            //             </div>
+                            //         </div>
+                            //         <div className=''>
+                            //             <li className='font-semibold text-slate-900 underline'>{user.email}</li>
+                            //             <li className='bg-slate-900 text-white  font-semibold px-10 py-2 cursor-pointer rounded-full' onClick={function handleRemove() {
+                            //                 setCookie("user", null, 0)
+                            //                 navigate("/")
+                            //             }}>Logout</li>
+                            //             <Dropdown
+                            //             label=""
+                            //             inline={true}
+                            //         >
+                            //             <Dropdown.Item>
+                            //                 <div className=''>
+                            //                     <li className='font-semibold text-slate-900 mx-2'>{user.email}</li>
+                            //                 </div>
+                            //             </Dropdown.Item>
+                            //             <Dropdown.Item>
+                            //                 <li className='bg-slate-900 text-white font-semibold px-10 py-2 cursor-pointer rounded-full mx-5' onClick={function handleRemove() {
+                            //                     setCookie("user", null, 0)
+                            //                     navigate("/")
+                            //                 }}>Logout</li>
+                            //             </Dropdown.Item>
+                            //         </Dropdown>
+                            //         <li><img src={userlogo} alt="userprofileimage" className='w-9 h-9' /></li>
+                            //         <div className={click ? "bg-white p-4" : "bg-none"}>
+                            //             <li className='font-semibold text-slate-900 underline'>{user.email}</li>
+                            //             <li className='bg-slate-900 text-white  font-semibold px-10 py-2 cursor-pointer rounded-full' onClick={function handleRemove() {
+                            //                 setCookie("user", null, 0)
+                            //                 navigate("/")
+                            //             }}>Logout</li>
+                            //         </div>
+                            //         </div>
+                            // </div>
                         ) : (<Link to='/signin'>
                             <li className='bg-slate-900 text-white  font-semibold px-10 py-2 cursor-pointer rounded-full'>Login</li>
                         </Link>)}
@@ -141,13 +158,27 @@ const Navbar = () => {
                             </div>
                         ) : (null)}
                         <ul className='flex flex-col items-start justify-center px-5'>
-                            <li className='mr-10  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer mb-5' onClick={handleNav}>
-                                <div><AiOutlineHeart size={23} /></div>
-                                <div>Destinations</div>
-                            </li>
+                            <Link to='/restaurants'>
+                                <li className='mr-10  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer mb-5' onClick={handleNav}>
+                                    <div><IoFastFoodOutline size={23} /></div>
+                                    <div>Restaurants</div>
+                                </li>
+                            </Link>
+                            <Link to='/hotels'>
+                                <li className='mr-10  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer mb-5' onClick={handleNav}>
+                                    <div><MdOutlineLocalHotel size={23} /></div>
+                                    <div>Hotels</div>
+                                </li>
+                            </Link>
+                            <Link to='/attractions'>
+                                <li className='mr-10  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer mb-5' onClick={handleNav}>
+                                    <div><TbMountain size={23} /></div>
+                                    <div>Attractions</div>
+                                </li>
+                            </Link>
                             <Link to='/form'>
                                 <li className='mr-10  font-semibold text-slate-900 flex items-center justify-center gap-2 cursor-pointer mb-10' onClick={handleNav}>
-                                    <div><SlPencil size={18} /></div>
+                                    <div><HiOutlinePencil size={23} /></div>
                                     <div>Feedback</div>
                                 </li>
                             </Link>

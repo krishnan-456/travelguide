@@ -9,7 +9,7 @@ const Card = ({ place }) => {
             <div className=' lg:w-96 lg:h-[435px] md:w-80 md:h-[450px] w-72 h-[470px] bg-white shadow-2xl rounded-md'>
                 <div className='relative flex items-start justify-end'>
                     {place.open_now_text ? <p className='text-xs font-semibold absolute mt-2 mr-4 bg-white p-1  text-slate-800'>{place.open_now_text}</p> : <p className='hidden'></p>}
-                    <img src={place.photo ? place.photo.images.large.url : "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} alt="restaurantImage" className='w-full h-44 object-cover object-center rounded-md' />
+                    <img src={place.photo ? place.photo.images.large.url : "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} alt="restaurantImage" className='w-full h-44 object-cover object-center' />
                 </div>
                 <div className='mt-4 px-4'>
                     <div className='flex items-center justify-between'>
