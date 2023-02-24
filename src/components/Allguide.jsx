@@ -26,13 +26,13 @@ const Allguide = (props) => {
     return (
         <>
             <Navbar />
-            {loading ? (<Loader />) : (
+            {loading ? (<p className="w-full h-screen flex items-center justify-center text-xl text-black">Please wait.....</p>) : (
                 locImg && locImg.result_object &&
                 <div className=" w-full h-full px-10">
                     <div className="mt-20 mb-20">
                         <p className="lg:text-4xl sm:text-2xl text-xl text-red-500 font-bold mb-10">Explore <span className="text-slate-900">{locImg.result_object.name}</span></p>
-                        <div className="flex lg:flex-row flex-col items-start justify-between">
-                            <img src={locImg.result_object.photo ? locImg.result_object.photo.images.large.url : "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} alt="placephoto" className="w-full sm:h-[480px] h-[240px] object-cover object-center" />
+                        <div className="flex xl:flex-row flex-col items-start justify-between">
+                            <img src={locImg.result_object.photo ? locImg.result_object.photo.images.large.url : "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} alt="placephoto" className="xl:w-[820px] w-full sm:h-[480px] h-[240px] object-cover object-center" />
                             <div className="lg:pl-10">
                                 <p className="lg:text-4xl sm:text-2xl text-xl text-red-500 font-bold mt-10 mb-4">About  <span className="text-slate-900">{locImg.result_object.name}</span></p>
                                 <p className="sm:text-lg text-base font-medium text-slate-800 xl:pr-20">{locImg.description ? locImg.description : (<p>{locImg.result_object.name}, a beautiful and historic destination located in {locImg.result_object.parent_display_name}. This magnificent site boasts cultural heritage, making it a must-visit destination for anyone interested in tourism.</p>)}</p>

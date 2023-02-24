@@ -13,7 +13,7 @@ const getAttractions = async (lt,ln) =>
             longitude: ln,
           },
           headers: {
-            'X-RapidAPI-Key': 'a533b9995fmshb1ebf62582d2d8fp169fe7jsn74f940cca8be',
+            'X-RapidAPI-Key': '81a0d179aemshd22cc26f1de1e91p1c85ebjsn9166402f8aa4',
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
           }
         });
