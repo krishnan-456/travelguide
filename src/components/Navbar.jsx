@@ -11,6 +11,7 @@ import { IoIosArrowDown } from "react-icons/io"
 import { MdOutlineLocalHotel } from 'react-icons/md'
 import { IoFastFoodOutline } from 'react-icons/io5'
 import { TbMountain } from 'react-icons/tb'
+import navlogo from '../assets/homepic.svg'
 const Navbar = () => {
     const navigate = useNavigate();
     const [nav, setNav] = useState(false);
@@ -47,8 +48,9 @@ const Navbar = () => {
     return (
         <div className='w-full h-20 bg-white sticky top-0 z-50'>
             <div className='w-full h-full flex items-center justify-between px-10'>
-                <div>
-                    <p className='text-xl text-slate-900 font-bold'><Link to='/'>Travelguide</Link></p>
+                <div className='flex items-center justify-center'>
+                    <img src={navlogo} alt="navlogo" width={30} className='sm:flex hidden'/>
+                    <p className='text-xl text-slate-900 font-bold ml-2'><Link to='/'>Travelguide</Link></p>
                 </div>
                 <div className='md:flex hidden'>
                     <ul className='flex items-center justify-center'>
