@@ -128,7 +128,7 @@ const Home = ({ places, attractions, loading, setInput, onGetCurrent, locationde
                             rec ? (
                                 <div>
                                     <Link to="">
-                                        <button onClick={onGetCurrent} className="md:w-[620px] w-[320px] h-14 bg-white shadow-xl flex items-start  sm:px-8 px-2 border-t-2">
+                                        <button onClick={onGetCurrent} className="md:w-[620px] w-[320px] h-14 bg-white shadow-xl flex items-start  sm:px-8 px-2 border-t-2" navigate='/guide'>
                                             <div className='flex items-center justify-center sm:pl-0 pl-10 mt-3'>
                                                 <div className='mr-3'><MdOutlineMyLocation size={18} /></div>
                                                 <div><p>Nearby</p></div>

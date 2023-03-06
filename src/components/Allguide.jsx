@@ -26,7 +26,7 @@ const Allguide = (props) => {
     return (
         <>
             <Navbar />
-            {loading ? (<p className="w-full h-[80vh] flex items-center justify-center text-xl text-black">Please wait.....</p>) : (
+            {loading ? (<p className="w-full h-[80vh] flex items-center justify-center text-xl font-medium text-black">Please wait..</p>) : (
                 locImg && locImg.result_object &&
                 <div className=" w-full h-full px-10">
                     <div className="mt-20 mb-20">

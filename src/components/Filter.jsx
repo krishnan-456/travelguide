@@ -38,7 +38,7 @@ const Filter = ({ data, setData }) => {
 
     const renderSearchForm = () => {
         return (
-            <div className='w-full h-20 flex items-center justify-evenly sm:flex-row flex-col mt-10'>
+            <div className='w-full flex items-center justify-between sm:flex-row flex-col mt-10 sm:px-10 px-0'>
                 <TextField id="outlined-basic" label="Search here" variant="outlined" sx={{ m: 1, minWidth: 260 }} size="small" onChange={(e) => setSearch(e.target.value)}/>
                 {/* <input placeholder='Search here!' onChange={(e) => setSearch(e.target.value)} className='border-2 border-slate-300 px-4 py-2 outline-none sm:w-[320px] w-[255px] rounded placeholder:text-black' /> */}
                 <div className='flex flex-wrap sm:mt-0 mt-2'>
